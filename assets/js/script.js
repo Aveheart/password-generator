@@ -78,16 +78,39 @@ function generatePassword() {
     console.log(userChoices);
   } 
   else if (confirmspecial && confirmlowerCase && confirmupperCase){
-    userchoices = special.concat(lowerCase, uppercase);
+    userchoices = special.concat(lowerCase, upperCase);
     console.log(userChoices);
   }
 
   /*user selects 2 options */
-  else if (confirmNumber && confirmSpecial){}
-  else if (confirmNumber && confirmlowerCase){}
-  else if (confirmNumber && confirmupperCase){}
-  else if (confirmSpecial && confirmlowerCase){}
-  else if (confirmSpecial && confirmupperCase){}
-  else if (confirmlowerCase && confirmupperCase) {}
+  else if (confirmNumber && confirmSpecial){
+    userChoices = number.concat(special);
+    console.log(userChoices);
+
+  }
+  else if (confirmNumber && confirmlowerCase){
+    userChoices = number.concat(lowerCase);
+    console.log(userChoices);
+
+  }
+  else if (confirmNumber && confirmupperCase){
+    userChoices = number.concat(uppercase);
+    console.log(userChoices);
+
+  }
+  else if (confirmSpecial && confirmlowerCase){
+    userChoices = special.concat(lowerCase);
+    console.log(userChoices);
+
+  }
+  else if (confirmSpecial && confirmupperCase){
+    userChoices = special.concat(upperCase);
+    console.log(userChoices);
+
+  }
+  else if (confirmlowerCase && confirmupperCase) {
+    userChoices = lowerCase.concat(upperCase);
+    console.log(userChoices);
+  }
 
 }
