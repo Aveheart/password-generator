@@ -47,10 +47,15 @@ function generatePassword() {
     confirmNumber = confirm("password will have a number");
     console.log("number" + confirmNumber);
 
-    confirmSpecial = confirm("password will have a special character")
-    confirmlowerCase
-    confirmupperCase
-    
+    confirmSpecial = confirm("password will have a special character");
+    console.log("special character" + confirmSpecial);
 
-  }
+    confirmlowerCase = confirm("password will have lowercase letter(s)");
+    console.log("lower case" + confirmlowerCase);
+
+    confirmupperCase = confirm("password will have uppercase letter(s)");
+    console.log("upper case" + confirmupperCase);
+  };
+
+
 }
