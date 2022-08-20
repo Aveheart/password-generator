@@ -1,4 +1,3 @@
-// Assignment Code
 var generateBtn = document.querySelector("#generate");
 /*var for all characters in password*/
 var userChoices;
@@ -36,7 +35,12 @@ function generatePassword() {
   /* question prompts*/
   length = prompt("choose between 8 and 128 characters for password");
   console.log("length of password" + length);
+
   if(!length){
     alert("you must choose a value");
+  
+  } else if(length <8 || length > 128) {
+    length = prompt("password has to be between 8 and 128 characters");
+    console.log("length of password" + length);
   }
 }
