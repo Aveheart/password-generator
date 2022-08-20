@@ -56,6 +56,14 @@ function generatePassword() {
     confirmupperCase = confirm("password will have uppercase letter(s)");
     console.log("upper case" + confirmupperCase);
   };
+  /* if user hits cancel on all criteria options will alert this message*/
+  if(!confirmNumber && !confirmSpecial && !confirmlowerCase && !confirmupperCase) {
+    userChoices = alert("must choose at least one criteria");
+  } /*if user answers ok on all 4 options */
+  else if (confirmNumber && confirmSpecial && confirmlowerCase && confirmupperCase){
+    userChoices = lowerCase.concat(number, special, upperCase);
+    console.log(userChoices);
+  }
 
 
 }
