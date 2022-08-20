@@ -80,7 +80,14 @@ function generatePassword() {
   else if (confirmspecial && confirmlowerCase && confirmupperCase){
     userchoices = special.concat(lowerCase, uppercase);
     console.log(userChoices);
-  
   }
+
+  /*user selects 2 options */
+  else if (confirmNumber && confirmSpecial){}
+  else if (confirmNumber && confirmlowerCase){}
+  else if (confirmNumber && confirmupperCase){}
+  else if (confirmSpecial && confirmlowerCase){}
+  else if (confirmSpecial && confirmupperCase){}
+  else if (confirmlowerCase && confirmupperCase) {}
 
 }
