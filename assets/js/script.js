@@ -7,7 +7,7 @@ var lowerCase;
 var upperCase;
 var number;
 var special;
-var passwordBlank = []; 
+
 
 /*arrays for each varia*ble*/
 number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,];
@@ -97,7 +97,7 @@ function generatePassword() {
 
   }
   else if (confirmNumber && confirmupperCase){
-    userChoices = number.concat(uppercase);
+    userChoices = number.concat(upperCase);
     console.log(userChoices);
 
   }
@@ -116,29 +116,31 @@ function generatePassword() {
     console.log(userChoices);
   }
   /*user chooses 1 option*/
-  else if(confirmNumber){
+  else if(confirmNumber) {
     userChoices = number;
     console.log(userChoices);
   }
-  else if(confirmSpecial){
+  else if(confirmSpecial) {
     userChoices = special;
     console.log(userChoices);
   }
-  else if(confirmlowerCase){
+  else if(confirmlowerCase) {
     userChoices = lowerCase;
     console.log(userChoices);
   }
-  else if(confirmupperCase){
-    userChoices = upperCase;
+  else if(confirmupperCase) {
+    userChoices = blankupper.concat(upperCase);
     console.log(userChoices);
   };
 
+  var passwordBlank = []; 
+  /*create loop to make random choice */
   for (var i = 0; i < length; i++) {
     var allChoices = userChoices[Math.floor(Math.random() * userChoices.length)];
     passwordBlank.push(allChoices);
     console.log(allChoices);
   }
-
+  /*password is created */
   var password = passwordBlank.join("");
   console.log("new password: " + password);
   return password;
@@ -148,4 +150,7 @@ function generatePassword() {
 
 
 
+
+
+  
 }
