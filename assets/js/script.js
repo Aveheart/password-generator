@@ -1,4 +1,5 @@
 var generateBtn = document.querySelector("#generate");
+
 /*var for all characters in password*/
 var userChoices;
 var length;
@@ -6,6 +7,8 @@ var lowerCase;
 var upperCase;
 var number;
 var special;
+var passwordBlank = []; 
+
 /*arrays for each varia*ble*/
 number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,];
 lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y","z"];
@@ -129,5 +132,20 @@ function generatePassword() {
     userChoices = upperCase;
     console.log(userChoices);
   };
+
+  for (var i = 0; i < length; i++) {
+    var allChoices = userChoices[Math.floor(Math.random() * userChoices.length)];
+    passwordBlank.push(allChoices);
+    console.log(allChoices);
+  }
+
+  var password = passwordBlank.join("");
+  console.log("new password: " + password);
+  return password;
+
+
+
+
+
 
 }
