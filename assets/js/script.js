@@ -32,15 +32,25 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
-  /* question prompts*/
+  /* question prompts for each var*/
   length = prompt("choose between 8 and 128 characters for password");
   console.log("length of password" + length);
-
+/*if user chooses a value not equal between 8 and 128 alert prompts */
   if(!length){
     alert("you must choose a value");
   
   } else if(length <8 || length > 128) {
     length = prompt("password has to be between 8 and 128 characters");
     console.log("length of password" + length);
+  }
+  else {
+    confirmNumber = confirm("password will have a number");
+    console.log("number" + confirmNumber);
+
+    confirmSpecial = confirm("password will have a special character")
+    confirmlowerCase
+    confirmupperCase
+    
+
   }
 }
