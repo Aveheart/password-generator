@@ -64,6 +64,17 @@ function generatePassword() {
     userChoices = lowerCase.concat(number, special, upperCase);
     console.log(userChoices);
   }
-
+  /*if user answers ok to 3 options */
+  else if(confirmNumber && confirmSpecial && confirmlowerCase){
+    userChoices = number.concat(special, lowerCase);
+    console.log(userChoices);
+  }
+  else if(confirmNumber && confirmSpecial && confirmupperCase) {
+    userChoices = number.concat(special, upperCase);
+  }
+  else if (confirmNumber && confirmlowerCase && confirmupperCase){
+    userChoices = number.concat(lowerCase, upperCase);
+  } 
+  
 
 }
