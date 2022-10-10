@@ -11,6 +11,8 @@ User must click ok for at least one.
 If all criteria met, new password is generated! 
 ![screenshot](./images/screenshot.jpeg);
 
+Deployed Link
+https://aveheart.github.io/password-generator/
 ## Credits
 Thank you to the instructors and my fellow study group peeps for helping me with this project.
 
